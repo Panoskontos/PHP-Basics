@@ -51,8 +51,17 @@ echo "<br>";
 
 // 
 $test = (26 * 8)-3;
-echo var_dump($test>12)
+echo var_dump($test>12);
+echo "<br>";
 
+// Conditionals
+if ($test<12){
+    echo "All good in the hood";
+} elseif ($test<1000){
+    echo "god damn";
+} else {
+    echo "Something didn't work";
+}
 ?>
 
 <!DOCTYPE html>
