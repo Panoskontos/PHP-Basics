@@ -5,7 +5,7 @@ $first = "panos";
 $last = "konτos";
 define("name","$first $last");
 
-// Strings
+// Strings Functions
 $word = "Now i show you the Kaiken";
 echo "<br>";
 echo strlen($word);
@@ -17,6 +17,23 @@ echo "<br>";
 echo strpos($word, "Kaiken");
 echo "<br>";
 echo str_replace("Kaiken","Garlic Gun",$word);
+echo "<br>";
+// Find str methods at PHP Reference
+// https://www.w3schools.com/php/php_ref_string.asp
+echo str_shuffle($word);
+// int and float points
+$num = 8;
+$num2 = 10.2345;
+echo "<br>";
+
+echo $num * $num2;
+echo "<br>";
+// floor returns the nearest int but the type remain float
+echo floor($num2);
+echo var_dump(floor($num2));
+echo "<br>";
+echo " GO TO ",M_LOG2E;
+echo "<br>";
 
 
 ?>
