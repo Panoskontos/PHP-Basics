@@ -115,5 +115,13 @@ echo $names["population"];
     echo "$last<br>";
     echo "<h1>",name,"</h1>";
     ?>
+
+
+<pre>
+    <?php
+        echo $names["city"];
+    ?>
+</pre>
+
 </body>
 </html>
