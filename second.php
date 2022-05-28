@@ -35,6 +35,11 @@ echo "<br>";
 echo " GO TO ",M_LOG2E;
 echo "<br>";
 
+// PHP math is pretty accurate
+$blocks = 230;
+$block = sqrt($blocks);
+echo $block;
+
 
 ?>
 
