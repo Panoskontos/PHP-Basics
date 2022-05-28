@@ -64,18 +64,40 @@ if ($test<12){
 }
 
 // switch
+// More than 3 cases or spesific items e.g. day of week
 $name = "Panos";
 switch ($name){
     case "Panos":
         echo "Developer";
         break;
-    case "Nick":
-        echo "Waiter";
-        break;
-    case "Leo":
-        echo "WWE";
-        break;
-}
+        case "Nick":
+            echo "Waiter";
+            break;
+            case "Leo":
+                echo "WWE";
+                break;
+            }
+            
+// Arrays
+// 2 ways array or []
+echo "<br>";
+$names = ["Goku","vegeta","gohan",23, array(1,2)];
+echo $names[0];
+echo var_dump($names);
+
+echo "<br>";
+
+// DICT
+// assosiated array (hashmap)
+$names = [
+    "city" => "ATH",
+    "population" => "80 dow"
+];
+echo var_dump($names);
+echo "<br>";
+echo $names["city"];
+echo $names["population"];
+
 
 ?>
 
