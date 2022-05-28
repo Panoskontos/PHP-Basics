@@ -84,7 +84,40 @@ echo math(3,6);
 require('functions.php');
 printAge(26);
 
+
+// <!-- SUPER GLOBALS -->
+// <!-- Variables that are always accessible, regardless of scope and you can access from anywhere -->
+$car = "Honda";
+
+function echoCar(){
+    // say you are using global var
+    global $car;
+    echo $car;
+
+    // Or instead do this
+    echo $GLOBALS["car"];
+
+    // Others you can try
+    // visit superglobals to see
+    echo $_SERVER["HTTP_HOST"];
+}
+echoCar();
+
+// Usefull when you want to pull or pass data from url
+// GET
+if(isset($_GET["username"])){
+    echo "GET <h1>username: {$_GET["username"]}</h1>";
+}
+
+// POST
+// You need form to do this
+if(isset($_POST["username"])){
+    echo "POST <h1>username: {$_POST["username"]}</h1>";
+}
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -95,6 +128,11 @@ printAge(26);
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- // POST -->
+    <form action="third.php" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username">
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
