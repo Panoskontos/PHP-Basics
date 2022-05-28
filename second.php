@@ -5,6 +5,20 @@ $first = "panos";
 $last = "konτos";
 define("name","$first $last");
 
+// Strings
+$word = "Now i show you the Kaiken";
+echo "<br>";
+echo strlen($word);
+echo "<br>";
+echo str_word_count($word);
+echo "<br>";
+echo strrev($word);
+echo "<br>";
+echo strpos($word, "Kaiken");
+echo "<br>";
+echo str_replace("Kaiken","Garlic Gun",$word);
+
+
 ?>
 
 <!DOCTYPE html>
