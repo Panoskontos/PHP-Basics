@@ -39,7 +39,19 @@ echo "<br>";
 $blocks = 230;
 $block = sqrt($blocks);
 echo $block;
+echo "<br>";
 
+// Operators
+$result = var_dump(3>=3);
+$result = var_dump((3>=3) && (3==3));
+// if == returns true
+$result = var_dump(('3'===3));
+echo $result;
+echo "<br>";
+
+// 
+$test = (26 * 8)-3;
+echo var_dump($test>12)
 
 ?>
 
