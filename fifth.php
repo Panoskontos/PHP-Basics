@@ -2,6 +2,9 @@
 
 // Class is a blueprint that you can use multiple times
 class Car{
+// Difference between private and protected is that private won't get passed down from inheritance
+// Stays with the object
+
     public $power = 100;
     private $cost = 22000;
     // constructor
@@ -13,6 +16,14 @@ class Car{
     // methods
     public function introduce(){
         echo "This is a new ",$this->brand;
+       
+    }
+
+    // protected 
+    protected function store(){
+        echo "<hr>";
+        echo "sold at the lady";
+        echo "<hr>";
     }
 }
 
@@ -29,6 +40,8 @@ echo "<br>";
 class Benz extends Car{
     public $year=2001;
     public function date_created(){
+        // use protected method
+        $this->store();
         echo "It was created $this->year";
     }
 }
@@ -38,3 +51,4 @@ echo "<br>";
 echo var_dump($b1);
 echo "<br>";
 $b1->date_created();
+
