@@ -45,9 +45,18 @@
 
     $c = new Car("WHITE", "Corvette");
     echo $c->message();
+    echo $c ->color;
 
     // passing variables
-    $name = "Panos Kontos"
+    $name = "Panos Kontos";
+
+
+    // Variables and Constants
+    $animal = "Bear";
+    $animal = "Panther";
+// Constant var
+    define("PLANE", "Jet");
+
     ?>
 
 
@@ -60,8 +69,16 @@
         <br>
         <!-- Passing variables and html to php -->
         <div style="color:white; background: grey; width:300px; height:200px;">
-            <?php echo "<h3> Name: $name </h3>"; ?>
+            <?php echo "<h3> Name: $name </h3>";
+                echo "<br>";
+             echo "<h3> Animal: $animal </h3>"; 
+            //  for constants you don't need dollar sign
+             echo "<h3>Plane: ",PLANE,"</h3>" ; 
+
+             ?>
         </div>
+
+        <!-- Comments are for tips or messages to other developers -->
 
     </body>
 

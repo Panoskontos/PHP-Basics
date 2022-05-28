@@ -6,3 +6,9 @@ https://www.w3schools.com/php/default.asp
 
 https://www.php.net/manual/en/
 
+
+
+Usefull commands
+
+run your server
+php -S localhost:8888
