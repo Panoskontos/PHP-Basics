@@ -25,6 +25,14 @@ class Car{
         echo "sold at the lady";
         echo "<hr>";
     }
+
+
+    // static var
+    public static $city = "ATH";
+    // static method
+    public static function Mycity(){
+        return "My location is ATH";
+    }
 }
 
 
@@ -52,3 +60,8 @@ echo var_dump($b1);
 echo "<br>";
 $b1->date_created();
 
+// You can access static variables any time
+echo "<br>";
+echo Car::$city;
+// and functions
+echo Car::Mycity();
