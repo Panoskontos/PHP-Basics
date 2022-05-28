@@ -1,12 +1,27 @@
 <?php
+
+// SESSION
+session_start();
+
+
 // COOKIES go to applocation and see them 
 // when something follows you is because of this
 $key = "Panos_cookie";
-$product = "M1 Pro";
+$product = "M1 Pro  ";
 setcookie($key,$product, time() + (86400*30),"/"); //86400 = 1 day
 
 if(isset($_COOKIE["Panos_cookie"])){
     echo $_COOKIE["Panos_cookie"];
+}
+
+
+
+// // delete session
+// session_unset();
+
+$_SESSION["goku"] = "Strongest";
+if (isset($_SESSION["goku"])){
+    echo var_dump($_SESSION["goku"]);
 }
 
 ?>
