@@ -57,6 +57,10 @@
 // Constant var
     define("PLANE", "Jet");
 
+    function printname(){
+        echo "My name is Panagiotis";
+    }
+
     ?>
 
 
@@ -73,7 +77,8 @@
                 echo "<br>";
              echo "<h3> Animal: $animal </h3>"; 
             //  for constants you don't need dollar sign
-             echo "<h3>Plane: ",PLANE,"</h3>" ; 
+             echo "<h3>Plane: ",PLANE,"</h3>" ;
+             printname(); 
 
              ?>
         </div>
