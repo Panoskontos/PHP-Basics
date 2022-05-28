@@ -31,7 +31,7 @@ class Car{
     public static $city = "ATH";
     // static method
     public static function Mycity(){
-        return "My location is ATH";
+        return self::$city;
     }
 }
 
