@@ -62,6 +62,21 @@ if ($test<12){
 } else {
     echo "Something didn't work";
 }
+
+// switch
+$name = "Panos";
+switch ($name){
+    case "Panos":
+        echo "Developer";
+        break;
+    case "Nick":
+        echo "Waiter";
+        break;
+    case "Leo":
+        echo "WWE";
+        break;
+}
+
 ?>
 
 <!DOCTYPE html>
