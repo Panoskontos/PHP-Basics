@@ -53,6 +53,37 @@ while ($j<count($anime)){
     $j++;
 }
 
+// For each loop | EASIER OPTION
+foreach ($anime as $a){
+    echo "<hr>";
+    echo "<p>$a</p>";
+}
+echo "<hr>";
+
+
+// Functions
+function sayHello($name){
+    // this is a function used for saying hi
+    echo "Hello {$name} ";
+};
+
+function math($a,$b){
+    return ($a*$b)+($a/$b);
+};
+
+sayHello("Mark");
+sayHello("Dennis");
+sayHello("Raul");
+
+echo math(3,6);
+
+
+// Require
+// Use file functions.php
+// LIKE IMPORT 
+require('functions.php');
+printAge(26);
+
 ?>
 
 <!DOCTYPE html>
