@@ -65,3 +65,61 @@ echo "<br>";
 echo Car::$city;
 // and functions
 echo Car::Mycity();
+
+
+// What if you want to pass a class to a class
+class Inventory{
+    public function carTotal($company){
+        $companies = [
+            "BMW"=> 240,
+            "HONDA"=>177
+        ];
+        return $companies[$company];
+    }
+}
+
+class HONDA{
+    public function __construct(Inventory $inventory){
+        echo "Dependency injection";
+    }
+}
+
+$i = new Inventory;
+$h = new HONDA($i);
+
+// Interfaces | Rules for class
+interface HumanInterface{
+    // which methods we need
+    public function carsSold();
+    // if it not used give error
+}
+
+class Human implements HumanInterface{
+    public function __construct($name){
+        $this->$name = $name;
+    }
+    // We need to create this method otherwise we have an error
+    public function carsSold(){
+        echo "Have sold some cars";
+    }
+}
+
+$h1 = new Human("Panos");
+$h1->carsSold();
+
+// Abstract Classes | Similar to Interface
+abstract class Story{
+    public function start(){
+        echo "story begins";
+    }
+    public function end(){
+        echo "story ends";
+    }
+}
+
+class Book extends Story{
+
+}
+echo "<br>";
+$b1 = new Book();
+$b1->start();
