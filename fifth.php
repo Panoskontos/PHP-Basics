@@ -123,3 +123,25 @@ class Book extends Story{
 echo "<br>";
 $b1 = new Book();
 $b1->start();
+
+// Method Chaining
+class Text{
+    public function __construct($text){
+        $this->text=$text;
+        // when you are planning to add functions
+        // to this function
+        return $this;
+    }
+
+    public function uppercase(){
+        $this->text = strtoupper($this->text);
+        return $this;
+    }
+
+    public function print(){
+        echo $this->text;
+    }
+}
+
+$myLetter = new Text("I love you");
+$myLetter->uppercase()->print();
